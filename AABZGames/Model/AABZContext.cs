@@ -12,6 +12,7 @@ namespace AABZGames.Model
         public AABZContext()
             : base("name=AABZModelContainer")
         {
+            Database.SetInitializer(new AABZContextInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
