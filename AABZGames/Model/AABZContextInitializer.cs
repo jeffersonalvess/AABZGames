@@ -15,7 +15,7 @@ namespace AABZGames.Model
                 context.Categories.Add(c);
             }
 
-            foreach (Plataform p in plataformsList)
+            foreach (Platform p in plataformsList)
             {
                 context.Plataforms.Add(p);
             }
@@ -34,9 +34,9 @@ namespace AABZGames.Model
             new Category { Name = "Games", isVisible = true }
         };
 
-        private Plataform[] plataformsList = {
-            new Plataform { Name = "Playstation 4", isVisible = true },
-            new Plataform { Name = "XBOX ONE", isVisible = true }
+        private Platform[] plataformsList = {
+            new Platform { Name = "Playstation 4", isVisible = true },
+            new Platform { Name = "XBOX ONE", isVisible = true }
         };
 
         private Product[] productsList = {

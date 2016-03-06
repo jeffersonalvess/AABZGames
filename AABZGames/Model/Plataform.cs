@@ -6,9 +6,9 @@ using System.Web;
 
 namespace AABZGames.Model
 {
-    public class Plataform
+    public class Platform
     {
-        public Plataform()
+        public Platform()
         {
             this.Products = new HashSet<Product>();
         }

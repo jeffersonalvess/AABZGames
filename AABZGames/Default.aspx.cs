@@ -14,7 +14,7 @@ namespace AABZGames
         protected void Page_Load(object sender, EventArgs e)
         {
             // See the comments inside the method before calling it.
-            //ResetModel();
+            ResetModel();
         }
 
         protected void ResetModel()

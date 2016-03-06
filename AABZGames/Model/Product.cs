@@ -17,7 +17,7 @@ namespace AABZGames.Model
         public int Id { get; set; }
         public string name { get; set; }
 
-        [ForeignKey("Plataform")]
+        [ForeignKey("Platform")]
         public string plataform { get; set; }
 
         [ForeignKey("Category")]
@@ -27,7 +27,7 @@ namespace AABZGames.Model
         public int stock { get; set; }
         public bool isVisible { get; set; }
 
-        public virtual Plataform Plataform { get; set; }
+        public virtual Platform Platform { get; set; }
         public virtual Category Category { get; set; }
         public virtual ICollection<ProductsCart> ProductsCart { get; set; }
         public virtual ICollection<ProductsOrder> ProductsOrders { get; set; }
