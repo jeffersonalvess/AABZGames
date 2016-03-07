@@ -15,6 +15,9 @@ namespace AABZGames
         {
             // See the comments inside the method before calling it.
             //ResetModel();
+
+            //Edit this shit to show images to commit. Fucking git!
+            Response.Redirect("http://www.google.com");
         }
 
         protected void ResetModel()
