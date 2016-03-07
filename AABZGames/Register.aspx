@@ -56,6 +56,36 @@
                 <asp:TextBox ID="txtZip" runat="server" MaxLength="5" Columns="5"></asp:TextBox> 
                 <asp:RequiredFieldValidator ID="reqZip" MaxLength="5" Columns="5" ControlToValidate="txtZip" EnableClientScript="true" ErrorMessage="*" runat="server" SetFocusOnError="true"></asp:RequiredFieldValidator>
             </p>
-            <asp:Label ID="error" runat="server"></asp:Label>
+            <p>
+                <asp:CheckBox ID="chkBill" runat="server" AutoPostBack="true" OnCheckedChanged="onCheckChangedMethod"/>
+                <asp:Label for="chkBill" runat="server" Text="Use this as Billing Address"></asp:Label> 
+            </p>
+            <asp:Panel runat="server" ID="panelBilling" Visible="true">
+                <p>
+                    <label class="field" for="txtBill1">Billing Address 1:</label>
+                    <asp:TextBox ID="txtBill1" runat="server" MaxLength="30" Columns="20"></asp:TextBox> 
+                </p>
+                <p>
+                    <label class="field" for="txtBill2">Billing Address 2:</label>
+                    <asp:TextBox ID="txtBill2" runat="server" MaxLength="30" Columns="20"></asp:TextBox> 
+                    <br />
+                </p>
+                    <p>
+                <label class="field" for="city">City:</label>
+                <asp:TextBox ID="TextBox1" runat="server" MaxLength="20" Columns="10"></asp:TextBox> 
+             
+                </p>
+                <p>
+                    <label class="field" for="billstate">State:</label>
+                    <asp:TextBox ID="billstate" runat="server" MaxLength="2" Columns="2"></asp:TextBox> 
+            
+                </p>
+                <p>
+                    <label class="field" for="billzip">Zip:</label>
+                    <asp:TextBox ID="billzip" runat="server" MaxLength="5" Columns="5"></asp:TextBox> 
+            
+                </p>
+            </asp:Panel>
             <asp:Button ID="btnSubmit" runat="server" CausesValidation="true" Text="Submit" OnClick="BtnSubmit"/> <br/>
+            <asp:Label ID="error" runat="server"></asp:Label>
 </asp:Content>
