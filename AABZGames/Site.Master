@@ -57,23 +57,34 @@
                         <div class="input-group">
                             <asp:TextBox ID="txtSearch" runat="server" placeholder="Search for ..." CssClass="form-control"></asp:TextBox>
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true" /></button>
+                                <asp:LinkButton runat="server" ID="btnSearch" CssClass="btn btn-default" OnClick="btnSearch_Click"><span class='glyphicon glyphicon-search' aria-hidden='true'></span></asp:LinkButton>
                             </span>
                         </div>
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><asp:HyperLink ID="linkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="linkAccessories" NavigateUrl="~/Products.aspx?category=Accessories" runat="server">Accessories</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="linkConsoles" NavigateUrl="~/Products.aspx?category=Consoles" runat="server">Consoles</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="linkGames" NavigateUrl="~/Products.aspx?category=Games" runat="server">Games</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="linkPS4" NavigateUrl="~/Products.aspx?platform=ps4" runat="server">Playstation 4</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="linkXone" NavigateUrl="~/Products.aspx?platform=xone" runat="server">Xbox One</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="linkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="linkAccessories" NavigateUrl="~/Products.aspx?category=Accessories" runat="server">Accessories</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="linkConsoles" NavigateUrl="~/Products.aspx?category=Consoles" runat="server">Consoles</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="linkGames" NavigateUrl="~/Products.aspx?category=Games" runat="server">Games</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="linkPS4" NavigateUrl="~/Products.aspx?platform=ps4" runat="server">Playstation 4</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="linkXone" NavigateUrl="~/Products.aspx?platform=xone" runat="server">Xbox One</asp:HyperLink></li>
                             </ul>
 
                             <ul class="nav navbar-nav navbar-right">
-                                <li><asp:HyperLink runat="server" ID="linkSignUp" NavigateUrl="~/Register.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</asp:HyperLink></li>
-                                <li><asp:HyperLink runat="server" ID="linkLogIn" NavigateUrl="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
-                                <li><asp:HyperLink runat="server" ID="linkCart" NavigateUrl="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="linkSignUp" NavigateUrl="~/Register.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="linkLogIn" NavigateUrl="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
+                                <li>
+                                    <asp:LinkButton runat="server" ID="linkLogout" Visible="false" OnClick="linkLogout_Click"><span class="glyphicon glyphicon-log-out"></span> Logout</asp:LinkButton></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="linkCart" NavigateUrl="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</asp:HyperLink></li>
                             </ul>
 
                         </div>
@@ -87,10 +98,21 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <div class="alert alert-warning" role="alert">
+                    <span class="sr-only">Warning:</span>
+                    <b>AABZ Games Store is a fictional game store</b> created as final project to DePaul University CSC 330 Advanced Internet Application Development.<br />
+                    All the products names, images, descriptions, and anything related to them were extracted from amazon.com and their propurse is only to decorate the page.<br />
+                    <b>Do not insert any form with personal information</b> like address, password or credit card number<br />
+                    AABZ Games Store was created to learning porpuses only.<br /><br />
+
+                    Fork us on <a href="https://github.com/jeffersonalvess/AABZGames">Github</a>.<br /><br />
+
+                    Students: 	Daniel Ziegler | Erik Barns | Jefferson Alves | Scott B <br />
+                    <p>&copy; <%: DateTime.Now.Year %> - AABZ Games Store</p>
+                </div>
             </footer>
         </div>
-
+        
     </form>
 </body>
 </html>

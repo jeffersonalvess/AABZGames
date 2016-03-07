@@ -22,6 +22,15 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtSearch;
         
         /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnSearch;
+        
+        /// <summary>
         /// linkHome control.
         /// </summary>
         /// <remarks>
@@ -92,6 +101,15 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink linkLogIn;
+        
+        /// <summary>
+        /// linkLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkLogout;
         
         /// <summary>
         /// linkCart control.
