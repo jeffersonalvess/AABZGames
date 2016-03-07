@@ -6,13 +6,13 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - AABZ Games</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -40,6 +40,7 @@
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
+
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -47,18 +48,41 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">
+                        <img alt="AABZ Games" src="Images/logo.png" height="48" /></a>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
+
+                <div class=" navbar-collapse collapse navbar-form" style="margin-bottom: 0px;">
+                    <div class="col-lg-11">
+                        <div class="input-group">
+                            <asp:TextBox ID="txtSearch" runat="server" placeholder="Search for ..." CssClass="form-control"></asp:TextBox>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true" /></button>
+                            </span>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav">
+                                <li><asp:HyperLink ID="linkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkAccessories" NavigateUrl="~/Products.aspx?category=Accessories" runat="server">Accessories</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkConsoles" NavigateUrl="~/Products.aspx?category=Consoles" runat="server">Consoles</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkGames" NavigateUrl="~/Products.aspx?category=Games" runat="server">Games</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkPS4" NavigateUrl="~/Products.aspx?platform=ps4" runat="server">Playstation 4</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkXone" NavigateUrl="~/Products.aspx?platform=xone" runat="server">Xbox One</asp:HyperLink></li>
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><asp:HyperLink runat="server" ID="linkSignUp" NavigateUrl="~/Register.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="linkLogIn" NavigateUrl="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="linkCart" NavigateUrl="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</asp:HyperLink></li>
+                            </ul>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+
+        <div class="container body-content" style="margin-top: 30px;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
