@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AABZGames.Model;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -16,6 +18,9 @@ namespace AABZGames
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Start Database
+            //Database.SetInitializer<AABZGamesModelContainer>(new AABZGamesContextInitializer());
         }
     }
 }

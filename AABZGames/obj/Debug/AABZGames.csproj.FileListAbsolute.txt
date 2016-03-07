@@ -1,1 +1,52 @@
+<<<<<<< HEAD
 C:\Users\erikb\Documents\GitHub\AABZGames\AABZGames\obj\Debug\AABZGames.csprojResolveAssemblyReference.cache
+=======
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\ApplicationInsights.config
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\csc.exe
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\System.Collections.Immutable.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\System.Reflection.Metadata.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\vbc.exe
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\VBCSCompiler.exe
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\VBCSCompiler.exe.config
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\AABZGames.dll.config
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\AABZGames.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\AABZGames.pdb
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Antlr3.Runtime.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\AspNet.ScriptManager.bootstrap.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\AspNet.ScriptManager.jQuery.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.DependencyCollector.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.Web.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.WindowsServer.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.ApplicationInsights.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.ScriptManager.WebForms.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.Web.Infrastructure.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Newtonsoft.Json.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\System.Web.Optimization.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\WebGrease.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.DependencyCollector.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.Web.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AI.WindowsServer.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.ApplicationInsights.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\System.Web.Optimization.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Antlr3.Runtime.pdb
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Newtonsoft.Json.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\obj\Debug\AABZGames.csprojResolveAssemblyReference.cache
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\obj\Debug\AABZGames.dll
+D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\obj\Debug\AABZGames.pdb
+>>>>>>> refs/remotes/origin/master
