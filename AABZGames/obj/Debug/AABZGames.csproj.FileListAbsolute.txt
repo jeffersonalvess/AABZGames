@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+C:\Users\erikb\Documents\GitHub\AABZGames\AABZGames\obj\Debug\AABZGames.csprojResolveAssemblyReference.cache
+=======
 D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\ApplicationInsights.config
 D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\csc.exe
 D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -46,3 +49,4 @@ D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGam
 D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\obj\Debug\AABZGames.csprojResolveAssemblyReference.cache
 D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\obj\Debug\AABZGames.dll
 D:\Users\jeffersonalvess\Documents\Visual Studio 2015\Projects\AABZGames\AABZGames\obj\Debug\AABZGames.pdb
+>>>>>>> refs/remotes/origin/master
