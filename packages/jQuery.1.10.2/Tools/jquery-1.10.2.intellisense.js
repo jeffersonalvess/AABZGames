@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+﻿intellisense.annotate(jQuery, {
+=======
 ﻿/* NUGET: BEGIN LICENSE TEXT
  *
  * Microsoft grants you the right to use these script files for the sole
@@ -13,6 +16,7 @@
  *
  * NUGET: END LICENSE TEXT */
 intellisense.annotate(jQuery, {
+>>>>>>> refs/remotes/origin/master
   'ajax': function() {
     /// <signature>
     ///   <summary>Perform an asynchronous HTTP (Ajax) request.</summary>
