@@ -71,8 +71,8 @@
                     <br />
                 </p>
                     <p>
-                <label class="field" for="city">City:</label>
-                <asp:TextBox ID="TextBox1" runat="server" MaxLength="20" Columns="10"></asp:TextBox> 
+                <label class="field" for="billcity">City:</label>
+                <asp:TextBox ID="billcity" runat="server" MaxLength="20" Columns="10"></asp:TextBox> 
              
                 </p>
                 <p>
