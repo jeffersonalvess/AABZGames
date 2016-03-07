@@ -55,9 +55,10 @@ namespace AABZGames
                             billingInfo.address_1 = txtBill1.Text;
                             billingInfo.address_2 = txtBill2.Text;
                             billingInfo.user_id = user.Id;//LINK TO USER    
-                            billingInfo.city = txtCity.Text;
-                            billingInfo.state = txtState.Text;
-                            billingInfo.zipcode = txtZip.Text;
+                            billingInfo.city = billcity.Text;
+                            billingInfo.state = billstate.Text;
+                            billingInfo.zipcode = billzip.Text;
+                            billingInfo.isBilling = true;
                             user.UserInfoes.Add(billingInfo);
 
                         }
