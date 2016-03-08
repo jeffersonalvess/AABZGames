@@ -31,6 +31,10 @@ textarea {
     }
 }
 
+.fix-width {
+    max-width: 280px;
+}
+
 .homeItems {
     margin-left: 5px;
     margin-right: 5px;
