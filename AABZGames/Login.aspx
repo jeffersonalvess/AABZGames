@@ -2,16 +2,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="mainBody">
 		<header>
-			<hgroup>
+			<div class="page-header">
 				<h1>Login</h1>
-			</hgroup>
+			</div>
 		</header>
 		<section>
 			<asp:Panel ID="panelLogin" Visible="false" runat="server">
-				Email: <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox><br/>
-				Password: <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox><br/>
-				<asp:Button runat="server" ID="btnLogin" OnClick="btn_login" Text="Login"></asp:Button> <br>
-				<asp:Label runat="server" ID="lblResults" ></asp:Label>
+                <div class="form-group row">
+                    <label class="col-sm-1 form-control-label" for="txtUserName">Email:</label>
+                    <div class="col-sm-3"><asp:TextBox ID="txtUserName" class="form-control" runat="server"></asp:TextBox></div>
+                </div>
+				<div class="form-group row">
+				     <label class="col-sm-1 form-control-label" for="txtPwd">Password:</label>
+                     <div class="col-sm-3"><asp:TextBox ID="txtPwd" class="form-control" runat="server" TextMode="Password"></asp:TextBox></div>
+                </div>
+                <div class="form-group row">
+				    <asp:Button runat="server" ID="btnLogin" class="btn btn-info" OnClick="btn_login" Text="Login"></asp:Button>
+				    <asp:Label runat="server" ID="lblResults" ></asp:Label>
+                </div>
+
 			</asp:Panel>
 		</section>
 		<footer>
