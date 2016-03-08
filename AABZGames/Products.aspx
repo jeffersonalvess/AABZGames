@@ -50,7 +50,7 @@
                                 
                                 <div>
                                     <span class="productPrice"><%# (Convert.ToDouble(Eval("price"))).ToString("C") %></span>
-                                    <asp:LinkButton ID="btnAddCart" CommandName="ProductID" CommandArgument='<%# Eval("Id") %>' runat="server" CssClass="btn btn-default btn-lg" OnClick="btnAddCart_Click">
+                                    <asp:LinkButton ID="btnAddCart" CommandName="ProductID" CommandArgument='<%# Eval("Id") %>' runat="server" CssClass="btn btn-default btn-lg" OnCommand="btnAddCart_Click">
                                         <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="color: #428BCA;"/>
                                     </asp:LinkButton>
                                 </div>

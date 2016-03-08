@@ -52,7 +52,7 @@ namespace AABZGames
                 platformQS = platformQS == "xone" ? "Xbox One" : "Playstation 4";
 
                 e.Query = from product in products
-                          where product.category == categoryQS && product.plataform == platformQS
+                          where product.category == categoryQS && product.plataform == platformQS && product.isVisible == true && product.stock > 0
                           orderby product.price
                           select product;
             }
@@ -61,7 +61,7 @@ namespace AABZGames
                 string[] categories = categoryQS.Split(',');
 
                 e.Query = from product in products
-                          where categories.Contains(product.category)
+                          where categories.Contains(product.category) && product.isVisible == true && product.stock > 0
                           orderby product.price
                           select product;
             }
@@ -70,28 +70,93 @@ namespace AABZGames
                 platformQS = platformQS == "xone" ? "Xbox One" : "Playstation 4";
 
                 e.Query = from product in products
-                          where product.plataform == platformQS
+                          where product.plataform == platformQS && product.isVisible == true && product.stock > 0
                           orderby product.price
                           select product;
             }
             else if (searchQS != null)
             {
                 e.Query = from product in products
-                          where product.name.Contains(searchQS)
+                          where product.name.Contains(searchQS) && product.isVisible == true && product.stock > 0
                           orderby product.price
                           select product;
             }
             else
             {
                 e.Query = from product in products
+                          where product.isVisible == true && product.stock > 0
                           select product;
             }
         }
 
-        protected void btnAddCart_Click(object sender, EventArgs e)
+        protected void btnAddCart_Click(object sender, CommandEventArgs e)
         {
             //Do Something to add product to cart.
             //To get the product it use e.CommandArgument
+
+            if (Session["ID"] != null)
+            {
+                int userID = Convert.ToInt32(Session["ID"]);
+                int productID = Convert.ToInt32(e.CommandArgument);
+
+                using (AABZContext entities = new AABZContext())
+                {
+                    var cart = entities.Carts.Find(userID);
+
+                    if (cart == null)
+                    {
+                        cart = entities.Carts.Create();
+
+                        cart.user_id = userID;
+                        cart.creation = DateTime.Now;
+                        cart.expiration = DateTime.Now.AddDays(7);
+
+                        entities.Carts.Add(cart);
+                        entities.SaveChanges();
+                    }
+                    else
+                    {
+                        cart.creation = DateTime.Now;
+                        cart.expiration = DateTime.Now.AddDays(7);
+
+                        entities.SaveChanges();
+                    }
+
+                    ProductsCart cartItem;
+
+                    try
+                    {
+                        cartItem = (from productInCart in entities.ProductsCarts
+                                        where productInCart.cart_id == userID && productInCart.product_id == productID
+                                        select productInCart).First();
+                    }
+                    catch (Exception)
+                    {
+                        cartItem = null;
+                    }
+
+
+                    if (cartItem == null)
+                    {
+                        cartItem = entities.ProductsCarts.Create();
+                        cartItem.cart_id = cart.user_id;
+                        cartItem.product_id = productID;
+                        cartItem.quantity = 1;
+
+                        entities.ProductsCarts.Add(cartItem);
+                        entities.SaveChanges();
+                    }
+                    else
+                    {
+                        cartItem.quantity += 1;
+                        entities.SaveChanges();
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("~/Login.aspx");
+            }
         }
     }
 }
