@@ -62,29 +62,19 @@
                         </div>
                         <div>
                             <ul class="nav navbar-nav">
-                                <li>
-                                    <asp:HyperLink ID="linkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
-                                <li>
-                                    <asp:HyperLink ID="linkAccessories" NavigateUrl="~/Products.aspx?category=Accessories" runat="server">Accessories</asp:HyperLink></li>
-                                <li>
-                                    <asp:HyperLink ID="linkConsoles" NavigateUrl="~/Products.aspx?category=Consoles" runat="server">Consoles</asp:HyperLink></li>
-                                <li>
-                                    <asp:HyperLink ID="linkGames" NavigateUrl="~/Products.aspx?category=Games" runat="server">Games</asp:HyperLink></li>
-                                <li>
-                                    <asp:HyperLink ID="linkPS4" NavigateUrl="~/Products.aspx?platform=ps4" runat="server">Playstation 4</asp:HyperLink></li>
-                                <li>
-                                    <asp:HyperLink ID="linkXone" NavigateUrl="~/Products.aspx?platform=xone" runat="server">Xbox One</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkAccessories" NavigateUrl="~/Products.aspx?category=Accessories" runat="server">Accessories</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkConsoles" NavigateUrl="~/Products.aspx?category=Consoles" runat="server">Consoles</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkGames" NavigateUrl="~/Products.aspx?category=Games" runat="server">Games</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkPS4" NavigateUrl="~/Products.aspx?platform=ps4" runat="server">Playstation 4</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkXone" NavigateUrl="~/Products.aspx?platform=xone" runat="server">Xbox One</asp:HyperLink></li>
                             </ul>
 
                             <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <asp:HyperLink runat="server" ID="linkSignUp" NavigateUrl="~/Register.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</asp:HyperLink></li>
-                                <li>
-                                    <asp:HyperLink runat="server" ID="linkLogIn" NavigateUrl="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
-                                <li>
-                                    <asp:LinkButton runat="server" ID="linkLogout" Visible="false" OnClick="linkLogout_Click"><span class="glyphicon glyphicon-log-out"></span> Logout</asp:LinkButton></li>
-                                <li>
-                                    <asp:HyperLink runat="server" ID="linkCart" NavigateUrl="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="linkSignUp" NavigateUrl="~/Register.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="linkLogIn" NavigateUrl="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
+                                <li><asp:LinkButton runat="server" ID="linkLogout" Visible="false" OnClick="linkLogout_Click"><span class="glyphicon glyphicon-log-out"></span> Logout</asp:LinkButton></li>
+                                <li><asp:HyperLink runat="server" ID="linkCart" NavigateUrl="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</asp:HyperLink></li>
                             </ul>
 
                         </div>

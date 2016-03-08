@@ -22,7 +22,7 @@ namespace AABZGames
                         linkLogIn.Visible = false;
                         linkLogout.Visible = true;
                         linkSignUp.Text = "<span class='glyphicon glyphicon-user'></span> " + user.first_name + " " + user.last_name;
-                        linkSignUp.NavigateUrl = "";
+                        linkSignUp.NavigateUrl = "~/OrderHistory.aspx";
                     }
                     else
                     {
