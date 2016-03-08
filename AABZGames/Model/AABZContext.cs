@@ -24,7 +24,7 @@ namespace AABZGames.Model
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserInfo> UserInfoes { get; set; }
         public virtual DbSet<Cart> Carts { get; set; }
-        public virtual DbSet<Platform> Plataforms { get; set; }
+        public virtual DbSet<Platform> Platforms { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductsCart> ProductsCarts { get; set; }

@@ -55,7 +55,7 @@
                 <div class=" navbar-collapse collapse navbar-form" style="margin-bottom: 0px;">
                     <div class="col-lg-11">
                         <div class="input-group">
-                            <asp:TextBox ID="txtSearch" runat="server" placeholder="Search for ..." CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtSearch" runat="server" placeholder="Search by product name" CssClass="form-control"></asp:TextBox>
                             <span class="input-group-btn">
                                 <asp:LinkButton runat="server" ID="btnSearch" CssClass="btn btn-default" OnClick="btnSearch_Click"><span class='glyphicon glyphicon-search' aria-hidden='true'></span></asp:LinkButton>
                             </span>
