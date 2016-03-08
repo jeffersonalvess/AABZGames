@@ -38,7 +38,7 @@
             </p>
             <p>
                 <label class="field" for="txtAdd2">Address 2:</label>
-                <asp:Textbox ID="txtAdd2" MaxLength="30" Columns="20" runat="server"/>
+                <asp:TextBox ID="txtAdd2" MaxLength="30" Columns="20" runat="server"/>
                 <br />
             </p>
             <p>

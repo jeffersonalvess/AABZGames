@@ -22,9 +22,18 @@ textarea {
 @media screen and (min-width: 768px) {
     .jumbotron {
         margin-top: 20px;
+        padding: 0px 0px 0px 0px;
+        background-color: #1A7A17;
+
     }
 
     .body-content {
         padding: 0;
     }
+}
+
+.homeItems {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
 }
