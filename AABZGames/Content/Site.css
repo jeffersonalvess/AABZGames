@@ -24,7 +24,6 @@ textarea {
         margin-top: 20px;
         padding: 0px 0px 0px 0px;
         background-color: #1A7A17;
-
     }
 
     .body-content {
@@ -36,4 +35,70 @@ textarea {
     margin-left: 5px;
     margin-right: 5px;
     width: 100%;
+}
+
+.productItems {
+    margin: 3px 0px 3px 0px;
+    width: 100%;
+}
+
+.productPrice {
+    text-align: left;
+    display: block;
+    width: 50%;
+    float: left;
+    color: red;
+    margin-top: 15px;
+    color: orange;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+    .productItems p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+.btn-products {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+.btn-products:hover,
+.btn-products:focus,
+.btn-products:active,
+.btn-products.active,
+.open .dropdown-toggle.btn-products {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+.btn-products:active,
+.btn-products.active,
+.open .dropdown-toggle.btn-products {
+  background-image: none;
+}
+
+.btn-products.disabled,
+.btn-products[disabled],
+fieldset[disabled] .btn-products,
+.btn-products.disabled:hover,
+.btn-products[disabled]:hover,
+fieldset[disabled] .btn-products:hover,
+.btn-products.disabled:focus,
+.btn-products[disabled]:focus,
+fieldset[disabled] .btn-products:focus,
+.btn-products.disabled:active,
+.btn-products[disabled]:active,
+fieldset[disabled] .btn-products:active,
+.btn-products.disabled.active,
+.btn-products[disabled].active,
+fieldset[disabled] .btn-products.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
 }

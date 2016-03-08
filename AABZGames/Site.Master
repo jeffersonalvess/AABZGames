@@ -54,15 +54,18 @@
 
                 <div class=" navbar-collapse collapse navbar-form" style="margin-bottom: 0px;">
                     <div class="col-lg-11">
-                        <div class="input-group">
-                            <asp:TextBox ID="txtSearch" runat="server" placeholder="Search by product name" CssClass="form-control"></asp:TextBox>
-                            <span class="input-group-btn">
-                                <asp:LinkButton runat="server" ID="btnSearch" CssClass="btn btn-default" OnClick="btnSearch_Click"><span class='glyphicon glyphicon-search' aria-hidden='true'></span></asp:LinkButton>
-                            </span>
-                        </div>
+                       
+                            <asp:Panel ID="SearchPanel" CssClass="input-group" runat="server" DefaultButton="btnSearch">
+                                <asp:TextBox ID="txtSearch" runat="server" placeholder="Search by product name" CssClass="form-control" ></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <asp:LinkButton runat="server" ID="btnSearch" CssClass="btn btn-default" OnClick="btnSearch_Click"><span class='glyphicon glyphicon-search' aria-hidden='true'></span></asp:LinkButton>
+                                </span>
+                            </asp:Panel>
+                        
                         <div>
                             <ul class="nav navbar-nav">
                                 <li><asp:HyperLink ID="linkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkAllProducts" NavigateUrl="~/Products.aspx" runat="server">All Products</asp:HyperLink></li>
                                 <li><asp:HyperLink ID="linkAccessories" NavigateUrl="~/Products.aspx?category=Accessories" runat="server">Accessories</asp:HyperLink></li>
                                 <li><asp:HyperLink ID="linkConsoles" NavigateUrl="~/Products.aspx?category=Consoles" runat="server">Consoles</asp:HyperLink></li>
                                 <li><asp:HyperLink ID="linkGames" NavigateUrl="~/Products.aspx?category=Games" runat="server">Games</asp:HyperLink></li>

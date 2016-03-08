@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
    
-     <div class="row" style="margin-top: 20px;">
+     <div class="row" style="margin-top: 30px;">
 
         <div class="col-md-2 list-group">
             
@@ -32,8 +32,35 @@
 
         </div>
 
-        <div class="col-md-8">
+        <div class="col-md-10">
 
+            <ef:EntityDataSource ID="ProductsListDataSource" runat="server" 
+                EntitySetName="Products" ContextTypeName="AABZGames.Model.AABZContext"
+                OrderBy="it.price"
+                OnQueryCreated="ProductsListDataSource_QueryCreated"/>
+
+            <div class="row">
+                <asp:ListView ID="ProductsListView" runat="server" DataSourceID="ProductsListDataSource">
+                <ItemTemplate>
+                    <div class="col-md-3">
+                        <div class="btn btn-products productItems">
+                            <asp:HyperLink runat="server" NavigateUrl='<%# "~/ProductDetails.aspx?productID=" + Eval("Id") %>'>
+                                <img alt="<%# Eval("name") %>" src="<%# "./Images/" + Eval("Id") + ".jpg" %>" height="150" />
+                                <p><%# Eval("name") %></p>
+                                
+                                <div>
+                                    <span class="productPrice"><%# (Convert.ToDouble(Eval("price"))).ToString("C") %></span>
+                                    <asp:LinkButton ID="btnAddCart" CommandName="ProductID" CommandArgument='<%# Eval("Id") %>' runat="server" CssClass="btn btn-default btn-lg" OnClick="btnAddCart_Click">
+                                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="color: #428BCA;"/>
+                                    </asp:LinkButton>
+                                </div>
+                                
+                            </asp:HyperLink>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:ListView>
+            </div>
         </div>
 
     </div>

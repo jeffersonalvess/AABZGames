@@ -2,9 +2,11 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <center><img src="Images/HomeBanner.png" alt="Home Banner" height="300" /></center>
-    </div>
+    <a href="Products.aspx">
+        <div class="jumbotron">
+            <center><img src="Images/HomeBanner.png" alt="Home Banner" height="300" /></center>
+        </div>
+    </a>
 
     <div class="row">
         <div class="col-md-4 ">
