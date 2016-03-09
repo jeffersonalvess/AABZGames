@@ -238,6 +238,15 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtBill1;
         
         /// <summary>
+        /// reqBill1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqBill1;
+        
+        /// <summary>
         /// txtBill2 control.
         /// </summary>
         /// <remarks>
@@ -256,6 +265,15 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox billcity;
         
         /// <summary>
+        /// reqbillcity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqbillcity;
+        
+        /// <summary>
         /// billstate control.
         /// </summary>
         /// <remarks>
@@ -265,6 +283,15 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox billstate;
         
         /// <summary>
+        /// reqbillstate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqbillstate;
+        
+        /// <summary>
         /// billzip control.
         /// </summary>
         /// <remarks>
@@ -272,6 +299,15 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox billzip;
+        
+        /// <summary>
+        /// reqbillzip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqbillzip;
         
         /// <summary>
         /// btnSubmit control.

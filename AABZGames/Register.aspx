@@ -68,24 +68,26 @@
                 <div class="form-group row">
                     <label class="col-sm-2 form-control-label" for="txtBill1">Address:</label>
                     <asp:TextBox ID="txtBill1" CssClass="form-control fix-width" runat="server" MaxLength="30" Columns="20"></asp:TextBox> 
+                    <asp:RequiredFieldValidator ID="reqBill1" ControlToValidate="txtBill1" EnableClientScript="true" ErrorMessage="*" runat="server" SetFocusOnError="true"></asp:RequiredFieldValidator>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 form-control-label" for="txtBill2">Address 2:</label>
-                    <asp:TextBox ID="txtBill2" CssClass="form-control fix-width" runat="server" MaxLength="30" Columns="20"></asp:TextBox> 
-                    <br />
+                    <asp:TextBox ID="txtBill2" CssClass="form-control fix-width" runat="server" MaxLength="30" Columns="20"></asp:TextBox>
                 </div>
                  <div class="form-group row">
                     <label class="col-sm-2 form-control-label" for="billcity">City:</label>
-                    <asp:TextBox ID="billcity" CssClass="form-control fix-width" runat="server" MaxLength="20" Columns="10"></asp:TextBox> 
+                    <asp:TextBox ID="billcity" CssClass="form-control fix-width" runat="server" MaxLength="20" Columns="10"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="reqbillcity" ControlToValidate="billcity" EnableClientScript="true" ErrorMessage="*" runat="server" SetFocusOnError="true"></asp:RequiredFieldValidator>     
                   </div>
                 <div class="form-group row">
                     <label class="col-sm-2 form-control-label" for="billstate">State:</label>
                     <asp:TextBox ID="billstate" CssClass="form-control fix-width"  runat="server" MaxLength="2" Columns="2"></asp:TextBox> 
-            
+                    <asp:RequiredFieldValidator ID="reqbillstate" ControlToValidate="billstate" EnableClientScript="true" ErrorMessage="*" runat="server" SetFocusOnError="true"></asp:RequiredFieldValidator>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 form-control-label" for="billzip">Zip:</label>
                     <asp:TextBox ID="billzip" CssClass="form-control fix-width" runat="server" MaxLength="5" Columns="5"></asp:TextBox>
+                     <asp:RequiredFieldValidator ID="reqbillzip" ControlToValidate="billzip" EnableClientScript="true" ErrorMessage="*" runat="server" SetFocusOnError="true"></asp:RequiredFieldValidator>
                 </div>
             </asp:Panel>
             <asp:Button ID="btnSubmit" class="btn btn-info" runat="server" CausesValidation="true" Text="Submit" OnClick="BtnSubmit"/> <br/>
