@@ -39,6 +39,7 @@ namespace AABZGames
                     {
                         Session["ID"] = s.Id.ToString();
                         panelLogin.Visible = false;
+                        Response.Redirect("Default.aspx");
                     }
                     else
                     {
