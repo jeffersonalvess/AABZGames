@@ -36,7 +36,7 @@ namespace AABZGames
                         user.first_name = txtFname.Text;
                         user.last_name = txtLastName.Text;
                         user.email = txtEmail.Text;
-                        var Pass = base64Encode(txtPass.Text);
+                        var Pass =  SecurePass.GenerateHash(txtPass.Text);
                         user.password = Pass;
 
                         var info = entities.UserInfoes.Create();
@@ -86,21 +86,6 @@ namespace AABZGames
         public void onCheckChangedMethod(Object sender, EventArgs e)
         {
             panelBilling.Visible = chkBill.Checked ? false : true;
-        }
-        //SOURCE: http://www.c-sharpcorner.com/UploadFile/145c93/save-password-using-salted-hashing/
-        public static string base64Encode(string sData) // Encode    
-        {
-            try
-            {
-                byte[] encData_byte = new byte[sData.Length];
-                encData_byte = System.Text.Encoding.UTF8.GetBytes(sData);
-                string encodedData = Convert.ToBase64String(encData_byte);
-                return encodedData;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error in base64Encode" + ex.Message);
-            }
         }
     }
 }
