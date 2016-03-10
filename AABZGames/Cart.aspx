@@ -6,8 +6,12 @@
     </asp:Panel>
     <asp:Panel ID="pnlCart" runat="server" Visible="true">
         <!--Items will be added to the cart programmatically-->
-        <asp:Table ID="tblCart" runat="server">
-        </asp:Table>
-        <asp:Button ID="btnCheckout" runat="server" Text="Proceed to Checkout"  OnClick="btnCheckout_Click" />
+        <div id="page-header"><h1>Cart</h1></div>
+        <div class="container">
+            <asp:Table ID="tblCart" class="table table-hover" runat="server">
+            </asp:Table>
+            <asp:Button ID="btnCheckout" class="btn btn-info" runat="server" Text="Proceed to Checkout"  OnClick="btnCheckout_Click" />
+        </div>
+
     </asp:Panel>
 </asp:Content>
