@@ -35,8 +35,9 @@ namespace AABZGames
                 using (AABZContext context = new AABZContext())
                 {
                     double totalProductCost;
-                    AABZGames.Model.Cart cart = (from c in context.Carts
-                                where c.user_id == ((int)Session["ID"])
+                    int uid = Int32.Parse(Session["ID"].ToString());
+                    var cart = (from c in context.Carts
+                                where c.user_id == uid
                                 select c).FirstOrDefault();
                     if(cart != null)
                     {
@@ -54,8 +55,9 @@ namespace AABZGames
                             cell = new TableCell();
                             totalProductCost = pc.Product.price * pc.quantity;
                             totalCartCost += totalProductCost;
-                            cell.Text = "$" + String.Format("{0:C2}", Convert.ToInt32(totalProductCost));
+                            cell.Text = "" + String.Format("{0:C2}", Convert.ToInt32(totalProductCost));
                             row.Cells.Add(cell);
+                            tblCart.Rows.Add(row);
                         }
                         TableRow endRow = new TableRow();
                         TableCell endCell = new TableCell();
@@ -64,8 +66,9 @@ namespace AABZGames
                         endCell.Text = "Subtotal: ";
                         endRow.Cells.Add(endCell);
                         endCell = new TableCell();
-                        endCell.Text = "$" + String.Format("{0:C2}", Convert.ToInt32(totalCartCost));
+                        endCell.Text = "" + String.Format("{0:C2}", Convert.ToInt32(totalCartCost));
                         endRow.Cells.Add(endCell);
+                        tblCart.Rows.Add(endRow);
                     }
                 }
             }
