@@ -8,7 +8,7 @@
         
         <asp:Repeater ID="rptCart" runat="server">
             <HeaderTemplate>
-                <table>
+                <table class="table table-hover">
                     <thead>
                         <td>Product</td>
                         <td>Quantity</td>
