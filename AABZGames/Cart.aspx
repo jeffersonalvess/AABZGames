@@ -5,13 +5,37 @@
         Please log in to view the contents of your cart.
     </asp:Panel>
     <asp:Panel ID="pnlCart" runat="server" Visible="true">
-        <!--Items will be added to the cart programmatically-->
-        <div id="page-header"><h1>Cart</h1></div>
-        <div class="container">
-            <asp:Table ID="tblCart" class="table table-hover" runat="server">
-            </asp:Table>
-            <asp:Button ID="btnCheckout" class="btn btn-info" runat="server" Text="Proceed to Checkout"  OnClick="btnCheckout_Click" />
-        </div>
-
+        
+        <asp:Repeater ID="rptCart" runat="server">
+            <HeaderTemplate>
+                <table>
+                    <thead>
+                        <td>Product</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                        <td></td>
+                    </thead>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <tr>
+                    <td>
+                        <%#Eval("Product.name") %>
+                    </td>
+                    <td>
+                        <%#Eval("quantity") %>
+                    </td>
+                    <td>
+                        <%#moneyString(multiply((int)Eval("quantity"), (double)Eval("Product.price"))) %>
+                    </td>
+                    <td>
+                        <asp:Button ID="btnDelete" runat="server" CommandArgument='<%#Eval("Id") %>' OnCommand="btnDelete_Command" Text="Remove" />
+                    </td>
+                </tr>
+            </ItemTemplate>
+            <FooterTemplate>
+                </table>
+            </FooterTemplate>
+        </asp:Repeater>
+        <asp:Button ID="btnCheckout" class="btn btn-info" runat="server" Text="Proceed to Checkout"  OnClick="btnCheckout_Click" />
     </asp:Panel>
 </asp:Content>
