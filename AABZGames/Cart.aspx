@@ -5,7 +5,7 @@
         Please log in to view the contents of your cart.
     </asp:Panel>
     <asp:Panel ID="pnlCart" runat="server" Visible="true">
-        
+        <h1>Cart</h1>
         <asp:Repeater ID="rptCart" runat="server">
             <HeaderTemplate>
                 <table class="table table-hover">
