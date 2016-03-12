@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AABZGames.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,29 +18,29 @@ namespace AABZGames
         {
             if (Page.IsValid)
             {
-                using (DBContext entities = new DBContext())
+                using (AABZContext entities = new AABZContext())
                 {
                     //try to add user to database, return error if fails
                     try
                     {
-                        var user = entities.User.Create();
-                        user.firstName = txtFname.Text;
-                        user.lastName = txtLastName.Text;
+                        var user = new User();
+                        user.first_name = txtFname.Text;
+                        user.last_name = txtLastName.Text;
                         user.email = txtEmail.Text;
                         var Pass = base64Encode(txtPass.Text);
                         user.password = Pass;
 
-                        var info = entities.User_info.Create();
-                        info.userId = user.id;//LINK TO USER                 
-                        info.address = txtAdd.Text;
-                        info.address2 = txtAdd2.Text;
+                        var info = new UserInfo();
+                        info.user_id = user.Id;//LINK TO USER                 
+                        info.address_1 = txtAdd.Text;
+                        info.address_2 = txtAdd2.Text;
                         info.city = txtCity.Text;
                         info.state = txtState.Text;
-                        info.zip = txtZip.Text;
-                        info.Phone = txtPhone.Text;
+                        info.zipcode = txtZip.Text;
+                        info.phone = txtPhone.Text;
 
                         entities.Users.Add(user);
-                        entities.User_info.Add(info);
+                        entities.UserInfoes.Add(info);
                         entities.SaveChanges();
                         //load information to panel
                         //show panel and hide form
@@ -49,6 +50,21 @@ namespace AABZGames
                         error.Text = "Error Occured. Error Info: " + ex.Message;
                     }
                 }
+
+                pnlFields.Visible = false;
+                pnlSuccess.Visible = true;
+
+                lblSuccess.Text = "<h2>Registration Succesful!</h2>";
+                lblFirst.Text = txtFname.Text;
+                lblLast.Text = txtLastName.Text;
+                lblEmail.Text = txtEmail.Text;
+                lblPhone.Text = txtPhone.Text;
+                lblAddress.Text = txtAdd.Text;
+                lblAddress2.Text = txtAdd2.Text;
+                lblCity.Text = txtCity.Text;
+                lblState.Text = txtState.Text;
+                lblZip.Text = txtZip.Text;
+                
             }
 
 

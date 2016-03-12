@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AABZGames.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,18 +27,19 @@ namespace AABZGames
             var email = txtUserName.Text;
             var Pass = txtPwd.Text;
             Pass = base64Encode(Pass);
-            using (FDBContext context = new FDBContext())
+            using (AABZContext context = new AABZContext())
             {
                 try
                 {
                     var s = (from c in context.Users
-                             where c.Email == email && c.Password == Pass
+                             where c.email == email && c.password == Pass
                              select c).FirstOrDefault();
                     //if valid create session and session cookie
                     if (s != null)
                     {
                         Session["ID"] = s.Id.ToString();
                         panelLogin.Visible = false;
+                        Response.Redirect("Store.aspx");
                     }
                     else
                     {

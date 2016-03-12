@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="AABZGames.Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <h1>Create your account</h1>
+    <h1>Create your account</h1>
+    <asp:Panel ID="pnlFields" runat="server" Visible="true">
+      
             <p>
                 <label class="field" for="fname">First:</label>
                 <asp:TextBox ID="txtFname" runat="server"></asp:TextBox>
@@ -24,7 +26,8 @@
             <p>
                <label class="field" for="conf">Confirm:</label>
                 <asp:TextBox ID="txtConf" runat="server" TextMode="Password"></asp:TextBox> 
-               <asp:RequiredFieldValidator TextMode="Password" ID="reqConf" ControlToValidate="txtConf" EnableClientScript="true" ErrorMessage="*" runat="server" SetFocusOnError="true"></asp:RequiredFieldValidator><asp:CompareValidator ID="comparePass" ControlToCompare="txtPass" ControlToValidate="txtConf" EnableClientScript="true" ErrorMessage="Passwords don't match" runat="server"></asp:CompareValidator>
+                <asp:RequiredFieldValidator TextMode="Password" ID="reqConf" ControlToValidate="txtConf" EnableClientScript="true" ErrorMessage="*" runat="server" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="comparePass" ControlToCompare="txtPass" ControlToValidate="txtConf" EnableClientScript="true" ErrorMessage="Passwords don't match" runat="server"></asp:CompareValidator>
             </p>
             <p>
                 <label class="field" for="txtPhone">Phone:</label>
@@ -58,4 +61,21 @@
             </p>
             <asp:Label ID="error" runat="server"></asp:Label>
             <asp:Button ID="btnSubmit" runat="server" CausesValidation="true" Text="Submit" OnClick="BtnSubmit"/> <br/>
+        </asp:Panel>
+        <asp:Panel ID="pnlSuccess" runat="server" Visible="false">
+            <asp:Label runat="server" ID="lblSuccess"></asp:Label><br /><br />
+
+            First Name: <asp:Label runat="server" ID="lblFirst"></asp:Label><br />
+            Last Name: <asp:Label runat="server" ID="lblLast"></asp:Label><br />
+            Email: <asp:Label runat="server" ID="lblEmail"></asp:Label><br />
+            Phone: <asp:Label runat="server" ID="lblPhone"></asp:Label><br />
+            Address 1: <asp:Label runat="server" ID="lblAddress"></asp:Label><br />
+            Address 2: <asp:Label runat="server" ID="lblAddress2"></asp:Label><br />
+            City: <asp:Label runat="server" ID="lblCity"></asp:Label><br />
+            State: <asp:Label runat="server" ID="lblState"></asp:Label><br />
+            Zip: <asp:Label runat="server" ID="lblZip"></asp:Label><br />
+            <br />
+
+            <a href="Login.aspx">Return to Login</a>
+        </asp:Panel>
 </asp:Content>
