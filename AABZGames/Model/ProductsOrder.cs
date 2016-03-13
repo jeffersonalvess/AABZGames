@@ -8,7 +8,7 @@ namespace AABZGames.Model
 {
     public class ProductsOrder
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey("Order")]
         public int order_id { get; set; }
