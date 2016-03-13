@@ -130,15 +130,6 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regCcCvv;
         
         /// <summary>
-        /// lblBillingAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBillingAddress;
-        
-        /// <summary>
         /// pnlBillingAddress control.
         /// </summary>
         /// <remarks>
@@ -146,6 +137,15 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlBillingAddress;
+        
+        /// <summary>
+        /// chkBilling control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label chkBilling;
         
         /// <summary>
         /// txtAddress1 control.
@@ -236,6 +236,15 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regZipCode;
+        
+        /// <summary>
+        /// lblSameAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSameAdd;
         
         /// <summary>
         /// tblAddress control.

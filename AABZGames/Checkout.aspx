@@ -56,9 +56,8 @@
                     </td>
                 </tr>
             </table>
-            Billing Address:<br />
-            <asp:Label ID="lblBillingAddress" runat="server" Text="Same as shipping address" Visible="true"></asp:Label><br />
             <asp:Panel ID="pnlBillingAddress" runat="server" Visible="false">
+                <asp:Label ID="chkBilling" runat="server" Text="Billing Address:"></asp:Label>
                 <table>
                     <tr>
                         <td>
@@ -117,8 +116,8 @@
                     </tr>
                 </table>
             </asp:Panel>
-            <h2>Shipping</h2>
-            Your order will be shipped to the following address:<br />
+            <h2>Addresses:</h2>
+            <asp:Label runat="server" ID="lblSameAdd"></asp:Label>
             <asp:Table ID="tblAddress" runat="server">
             </asp:Table>
             <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
