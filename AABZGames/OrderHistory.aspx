@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="page-header"><h1>Order History</h1></div>
     <asp:Label runat="server" ID="lblResults2" BackColor="Red"></asp:Label>
-	<asp:Table ID="tblData" class="table-hover" runat="server">
+	<asp:Table ID="tblData" class="table table-hover" runat="server">
 			<asp:TableHeaderRow>
 				<asp:TableHeaderCell>Id </asp:TableHeaderCell>
 				<asp:TableHeaderCell>Shipping Address Id</asp:TableHeaderCell>

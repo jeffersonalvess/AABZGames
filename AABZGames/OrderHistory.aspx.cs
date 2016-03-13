@@ -44,10 +44,13 @@ namespace AABZGames
 
                             cell = new TableCell();
                             String products = "";
+                            double total = 0;
                             foreach(ProductsOrder p in entry.ProductsOrders)
                             {
-                                products += p.Product.name + ": " + p.quantity + " X " + p.price + " = " + (p.quantity * p.price) + "\n";
+                                total += p.price * p.quantity;
+                                products += p.order_id + ".  " +p.Product.name + ": " + p.quantity + " X " + p.price + " = " + (p.quantity * p.price) + "<br/";
                             }
+                            products += "Total:  $" + total;
                             cell.Text = products;
                             row.Cells.Add(cell);
 
