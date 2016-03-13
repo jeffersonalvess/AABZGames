@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AABZGames.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - AABZ Games</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">
+                        <img alt="AABZ Games" src="Images/logo.png" height="48" /></a>
+                </div>
+
+                <div class=" navbar-collapse collapse navbar-form" style="margin-bottom: 0px;">
+                    <div class="col-lg-11">
+                       
+                            <asp:Panel ID="SearchPanel" CssClass="input-group" runat="server" DefaultButton="btnSearch">
+                                <asp:TextBox ID="txtSearch" runat="server" placeholder="Search by product name" CssClass="form-control" ></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <asp:LinkButton runat="server" ID="btnSearch" CssClass="btn btn-default" OnClick="btnSearch_Click"><span class='glyphicon glyphicon-search' aria-hidden='true'></span></asp:LinkButton>
+                                </span>
+                            </asp:Panel>
+                        
+                        <div>
+                            <ul class="nav navbar-nav">
+                                <li><asp:HyperLink ID="linkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkAllProducts" NavigateUrl="~/Products.aspx" runat="server">All Products</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkAccessories" NavigateUrl="~/Products.aspx?category=Accessories" runat="server">Accessories</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkConsoles" NavigateUrl="~/Products.aspx?category=Consoles" runat="server">Consoles</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkGames" NavigateUrl="~/Products.aspx?category=Games" runat="server">Games</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkPS4" NavigateUrl="~/Products.aspx?platform=ps4" runat="server">Playstation 4</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="linkXone" NavigateUrl="~/Products.aspx?platform=xone" runat="server">Xbox One</asp:HyperLink></li>
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><asp:HyperLink runat="server" ID="linkSignUp" NavigateUrl="~/Register.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="linkLogIn" NavigateUrl="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
+                                <li><asp:LinkButton runat="server" ID="linkLogout" Visible="false" OnClick="linkLogout_Click" CausesValidation="false"><span class="glyphicon glyphicon-log-out"></span> Logout</asp:LinkButton></li>
+                                <li><asp:HyperLink runat="server" ID="linkCart" NavigateUrl="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</asp:HyperLink></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container body-content" style="margin-top: 30px;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <div class="alert alert-warning" role="alert">
+                    <span class="sr-only">Warning:</span>
+                    <b>AABZ Games Store is a fictional game store</b> created as final project to DePaul University CSC 330 Advanced Internet Application Development.<br />
+                    All the products names, images, descriptions, and anything related to them were extracted from amazon.com and their propurse is only to decorate the page.<br />
+                    <b>Do not insert any form with personal information</b> like address, password or credit card number<br />
+                    <b>AABZ Games Store was created for learning purposes only.</b><br /><br />
+
+                    Fork us on <a href="https://github.com/jeffersonalvess/AABZGames">Github</a>.<br /><br />
+
+                    Students: 	Daniel Ziegler | Erik Barns | Jefferson Alves | Scott B <br />
+                    <p>&copy; <%: DateTime.Now.Year %> - AABZ Games Store</p>
+                </div>
+            </footer>
+        </div>
+        
+    </form>
+</body>
+</html>
