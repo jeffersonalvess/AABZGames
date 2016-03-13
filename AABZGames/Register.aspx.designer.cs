@@ -13,6 +13,15 @@ namespace AABZGames {
     public partial class Register {
         
         /// <summary>
+        /// reqFname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFname;
+        
+        /// <summary>
         /// txtFname control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtFname;
         
         /// <summary>
-        /// reqFname control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFname;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// txtLastName control.
@@ -40,13 +49,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
         
         /// <summary>
-        /// reqLname control.
+        /// reqEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqLname;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail;
         
         /// <summary>
         /// txtEmail control.
@@ -58,13 +67,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// reqEmail control.
+        /// reqPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPass;
         
         /// <summary>
         /// txtPass control.
@@ -76,13 +85,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtPass;
         
         /// <summary>
-        /// reqPass control.
+        /// reqConf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPass;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqConf;
         
         /// <summary>
         /// txtConf control.
@@ -94,15 +103,6 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtConf;
         
         /// <summary>
-        /// reqConf control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqConf;
-        
-        /// <summary>
         /// comparePass control.
         /// </summary>
         /// <remarks>
@@ -110,15 +110,6 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator comparePass;
-        
-        /// <summary>
-        /// txtPhone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
         
         /// <summary>
         /// reqPhone control.
@@ -130,13 +121,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPhone;
         
         /// <summary>
-        /// txtAdd control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAdd;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
         
         /// <summary>
         /// reqAdd control.
@@ -148,6 +139,15 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqAdd;
         
         /// <summary>
+        /// txtAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAdd;
+        
+        /// <summary>
         /// txtAdd2 control.
         /// </summary>
         /// <remarks>
@@ -155,15 +155,6 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAdd2;
-        
-        /// <summary>
-        /// txtCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCity;
         
         /// <summary>
         /// reqCity control.
@@ -175,13 +166,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqCity;
         
         /// <summary>
-        /// txtState control.
+        /// txtCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtState;
+        protected global::System.Web.UI.WebControls.TextBox txtCity;
         
         /// <summary>
         /// reqState control.
@@ -193,13 +184,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqState;
         
         /// <summary>
-        /// txtZip control.
+        /// txtState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtZip;
+        protected global::System.Web.UI.WebControls.TextBox txtState;
         
         /// <summary>
         /// reqZip control.
@@ -209,6 +200,15 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqZip;
+        
+        /// <summary>
+        /// txtZip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtZip;
         
         /// <summary>
         /// chkBill control.
@@ -229,15 +229,6 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.Panel panelBilling;
         
         /// <summary>
-        /// txtBill1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBill1;
-        
-        /// <summary>
         /// reqBill1 control.
         /// </summary>
         /// <remarks>
@@ -245,6 +236,15 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqBill1;
+        
+        /// <summary>
+        /// txtBill1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBill1;
         
         /// <summary>
         /// txtBill2 control.
@@ -256,15 +256,6 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.TextBox txtBill2;
         
         /// <summary>
-        /// billcity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox billcity;
-        
-        /// <summary>
         /// reqbillcity control.
         /// </summary>
         /// <remarks>
@@ -274,13 +265,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqbillcity;
         
         /// <summary>
-        /// billstate control.
+        /// billcity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox billstate;
+        protected global::System.Web.UI.WebControls.TextBox billcity;
         
         /// <summary>
         /// reqbillstate control.
@@ -292,13 +283,13 @@ namespace AABZGames {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqbillstate;
         
         /// <summary>
-        /// billzip control.
+        /// billstate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox billzip;
+        protected global::System.Web.UI.WebControls.TextBox billstate;
         
         /// <summary>
         /// reqbillzip control.
@@ -308,6 +299,15 @@ namespace AABZGames {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqbillzip;
+        
+        /// <summary>
+        /// billzip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox billzip;
         
         /// <summary>
         /// btnSubmit control.
