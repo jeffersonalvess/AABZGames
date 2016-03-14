@@ -76,7 +76,7 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li><asp:HyperLink runat="server" ID="linkSignUp" NavigateUrl="~/Register.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="linkLogIn" NavigateUrl="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
-                                <li><asp:LinkButton runat="server" ID="linkLogout" Visible="false" OnClick="linkLogout_Click"><span class="glyphicon glyphicon-log-out"></span> Logout</asp:LinkButton></li>
+                                <li><asp:LinkButton runat="server" ID="linkLogout" Visible="false" OnClick="linkLogout_Click" CausesValidation="false"><span class="glyphicon glyphicon-log-out"></span> Logout</asp:LinkButton></li>
                                 <li><asp:HyperLink runat="server" ID="linkCart" NavigateUrl="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</asp:HyperLink></li>
                             </ul>
 
@@ -96,7 +96,7 @@
                     <b>AABZ Games Store is a fictional game store</b> created as final project to DePaul University CSC 330 Advanced Internet Application Development.<br />
                     All the products names, images, descriptions, and anything related to them were extracted from amazon.com and their propurse is only to decorate the page.<br />
                     <b>Do not insert any form with personal information</b> like address, password or credit card number<br />
-                    <b>AABZ Games Store was created for learning porpuses only.</b><br /><br />
+                    <b>AABZ Games Store was created for learning purposes only.</b><br /><br />
 
                     Fork us on <a href="https://github.com/jeffersonalvess/AABZGames">Github</a>.<br /><br />
 
