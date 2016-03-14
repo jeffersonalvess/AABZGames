@@ -171,9 +171,9 @@ namespace AABZGames
                             po.quantity = pc.quantity;
                             po.price = pc.Product.price * pc.quantity;
                             po.Order = order;
-                            context.PoductsOrders.Add(po);
+                            context.ProductsOrders.Add(po);
                             orders.Add(po);
-                           
+
                         }
                         order.ProductsOrders = orders;
                         //create payment
@@ -271,27 +271,68 @@ namespace AABZGames
         {
             if (Page.IsValid)
             {
-                    Order order = createOrder();
-                    if (order != null)
-                    {
-                    using (AABZContext context = new AABZContext())
-                    {
-                        int userId = Convert.ToInt32(Session["ID"].ToString());
-                        Model.Cart cart = (from c in context.Carts
-                                           where c.user_id == userId
-                                           select c).FirstOrDefault();
-
-                        context.ProductsCarts.RemoveRange(context.ProductsCarts.Where(x => x.cart_id == cart.user_id));
-                       // cart.products_cart = new HashSet<ProductsCart>();
-                        context.SaveChanges();
-                    }
-                        Response.Redirect("InitiateTransaction.aspx");
-                    }
-                    else
-                    {
-                       // lblSameAdd.Text = "ERROR";
-                    }
+                Order order = createOrder();
+                if (order != null)
+                {
+                RedirectUser();
+                }
+                else
+                {
+                    // lblSameAdd.Text = "ERROR";
                 }
             }
+        }
+
+        public void RedirectUser()
+        {
+            if (Session["ID"] != null)
+            {
+
+                int id = Convert.ToInt32(Session["ID"]);
+                int orderId;
+                double price;
+
+                using (AABZContext context = new AABZContext())
+                {
+                    //This ensures that order is the most recent order the user has made.
+                    Order order = (from o in context.Orders
+                                   where o.user_id == id
+                                   orderby o.Id descending
+                                   select o).FirstOrDefault();
+                    orderId = order.Id;
+                    price = getTotalOrderCost(order);
+                }
+
+                //Assign the values for the properties we need to pass to the service
+                String AppId = System.Configuration.ConfigurationManager.AppSettings["CreditAppId"];
+                String SharedKey = System.Configuration.ConfigurationManager.AppSettings["CreditAppSharedKey"];
+                String AppTransId = orderId.ToString();
+                String AppTransAmount = price.ToString();
+
+                // Hash the values so the server can verify the values are original
+                String hash = HttpUtility.UrlEncode(CreditAuthorizationClient.GenerateClientRequestHash(SharedKey, AppId, AppTransId, AppTransAmount));
+
+                //Create the URL and  concatenate  the Query String values
+                String url = "http://ectweb2.cs.depaul.edu/ECTCreditGateway/Authorize.aspx";
+                url = url + "?AppId=" + AppId;
+                url = url + "&TransId=" + AppTransId;
+                url = url + "&AppTransAmount=" + AppTransAmount;
+                url = url + "&AppHash=" + hash;
+
+                //Redirect the User to the Service
+                Response.Redirect(url);
+            }
+        }
+
+        public double getTotalOrderCost(Order order)
+        {
+            double total = 0;
+            foreach (ProductsOrder po in order.ProductsOrders)
+            {
+                total += po.price;
+            }
+            return total;
+        }
+
     }
 }
