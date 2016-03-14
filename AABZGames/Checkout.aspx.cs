@@ -171,7 +171,6 @@ namespace AABZGames
                             po.quantity = pc.quantity;
                             po.price = pc.Product.price * pc.quantity;
                             po.Order = order;
-
                             context.PoductsOrders.Add(po);
                             orders.Add(po);
 
@@ -301,6 +300,12 @@ namespace AABZGames
                                    orderby o.Id descending
                                    select o).FirstOrDefault();
                     orderId = order.Id;
+                    int userId = Convert.ToInt32(Session["ID"].ToString());
+                    Model.Cart cart = (from c in context.Carts
+                                       where c.user_id == userId
+                                       select c).FirstOrDefault();
+                    context.ProductsCarts.RemoveRange(context.ProductsCarts.Where(x => x.cart_id == cart.user_id));
+                    context.SaveChanges();
                     price = getTotalOrderCost(order);
                 }
 
