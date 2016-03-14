@@ -173,7 +173,7 @@ namespace AABZGames
                             po.Order = order;
                             context.PoductsOrders.Add(po);
                             orders.Add(po);
-
+                           
                         }
                         order.ProductsOrders = orders;
                         //create payment
@@ -274,6 +274,17 @@ namespace AABZGames
                     Order order = createOrder();
                     if (order != null)
                     {
+                    using (AABZContext context = new AABZContext())
+                    {
+                        int userId = Convert.ToInt32(Session["ID"].ToString());
+                        Model.Cart cart = (from c in context.Carts
+                                           where c.user_id == userId
+                                           select c).FirstOrDefault();
+
+                        context.ProductsCarts.RemoveRange(context.ProductsCarts.Where(x => x.cart_id == cart.user_id));
+                       // cart.products_cart = new HashSet<ProductsCart>();
+                        context.SaveChanges();
+                    }
                         Response.Redirect("InitiateTransaction.aspx");
                     }
                     else
