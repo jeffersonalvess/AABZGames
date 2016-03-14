@@ -326,7 +326,8 @@ namespace AABZGames
                 url = url + "&AppHash=" + hash;
 
                 //Redirect the User to the Service
-                Response.Redirect(url);
+                //Response.Redirect(url);
+                Response.Redirect("~/OrderHistory.aspx");
             }
         }
 
