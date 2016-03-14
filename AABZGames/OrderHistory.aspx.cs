@@ -23,9 +23,9 @@ namespace AABZGames
                 {
                     try
                     {
-                        var history = from o in context.Orders
-                                      where o.user_id == id
-                                      select o;
+                        var history = (from o in context.Orders
+                                       where o.user_id == id
+                                       select o).ToList();
                         foreach (var entry in history)
                         {
                             TableRow row = new TableRow();
@@ -35,11 +35,11 @@ namespace AABZGames
                             row.Cells.Add(cell);
 
                             cell = new TableCell();
-                            cell.Text = entry.ShippingAddress.address_1;
+                            cell.Text = entry.ShippingAddress.address_1 + "<br/>" + entry.ShippingAddress.address_2;
                             row.Cells.Add(cell);
 
                             cell = new TableCell();
-                            cell.Text = entry.BillingAddress.address_1;
+                            cell.Text = entry.BillingAddress.address_1 + "<br/>" + entry.BillingAddress.address_2;
                             row.Cells.Add(cell);
 
                             cell = new TableCell();
@@ -48,7 +48,16 @@ namespace AABZGames
                             foreach(ProductsOrder p in entry.ProductsOrders)
                             {
                                 total += p.price * p.quantity;
-                                products += p.order_id + ".  " +p.Product.name + ": " + p.quantity + " X " + p.price + " = " + (p.quantity * p.price) + "<br/";
+                                products += "#"+p.Id + " " +p.Product.name + "<br/>";
+                            }
+                            cell.Text = products;
+                            row.Cells.Add(cell);
+                            cell = new TableCell();
+                            products = "";
+                            foreach (ProductsOrder p in entry.ProductsOrders)
+                            {
+                                total += p.price * p.quantity;
+                                products += p.quantity + " X " + p.price + " = " + (p.quantity * p.price) + "<br/>";
                             }
                             products += "Total:  $" + total;
                             cell.Text = products;

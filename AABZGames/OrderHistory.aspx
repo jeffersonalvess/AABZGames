@@ -8,6 +8,7 @@
 				<asp:TableHeaderCell>Shipping Address Id</asp:TableHeaderCell>
 				<asp:TableHeaderCell>Billing Address Id</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Product Order</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Total</asp:TableHeaderCell>
 			</asp:TableHeaderRow>
     </asp:Table>
 </asp:Content>
