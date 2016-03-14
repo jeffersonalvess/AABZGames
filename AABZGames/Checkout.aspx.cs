@@ -171,7 +171,8 @@ namespace AABZGames
                             po.quantity = pc.quantity;
                             po.price = pc.Product.price * pc.quantity;
                             po.Order = order;
-                            context.ProductsOrders.Add(po);
+
+                            context.PoductsOrders.Add(po);
                             orders.Add(po);
 
                         }
