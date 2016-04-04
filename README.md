@@ -1,4 +1,4 @@
-# AABZGames
+# AABZ Games
 
 <img width="325" alt="logo" src="https://cloud.githubusercontent.com/assets/7515790/14262609/005dd30c-fa7c-11e5-9ea0-5715bc348cef.png">
 
