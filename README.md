@@ -2,7 +2,7 @@
 
 <img width="325" alt="logo" src="https://cloud.githubusercontent.com/assets/7515790/14262609/005dd30c-fa7c-11e5-9ea0-5715bc348cef.png">
 
-AABZ Games is a Web based store as final project of DePaul's ECT 330. It was developed using C#.NET and Microsoft SQL Server, making extensive use of Entinty Framework to deal with data transactions. The project is a simple Game Store which sells games, accessories and consoles from the main platforms available in the market. 
+AABZ Games is a Web based store built as final project of DePaul's ECT 330. It was developed using C#.NET and Microsoft SQL Server, making extensive use of Entinty Framework to deal with data transactions. The project is a simple Game Store which sells games, accessories and consoles from the main platforms available in the market. 
 
 
 > **Features:**
