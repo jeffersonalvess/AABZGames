@@ -7,13 +7,14 @@ AABZ Games is a Web based store built as final project of DePaul's ECT 330. It w
 
 > **Features:**
 > - Splash Screen: A simple screen detailing what is the website about.
-> - Home screen: On the home screen will be present a banner with promotions and new releases, it will also present the store’s key products.
-> - Products: The products screen will have a relation of all the products available to shop, it will also be used to return search results.
-> - Description: On this screen the users will see more details about the product such as images, video, description, rating, etc.
-> - Login: This page will provide a login form so the users can log in the store.
-> - Register: This page will request the user to register, giving basic information needed by the store, like username, password, email, phone number and address.
-> - Cart: This page will show all the products which a user is pretending to buy.
-> - Checkout: This screen will show the user the items being bought and you ask for the delivery address and payment information.
+> - Home screen: The home screen presents a banner with promotions and new releases, it also presents the store’s key products.
+> - Products: The products screen is related with all products available to shop, it is also be used to return search results.
+> - Description: On this screen the users can see more details about the product such as images, video, description, rating, etc.
+> - Login: This page provides a login form so the users can log in the store.
+> - Register: This page requests the user to register, giving basic information needed by the store, like username, password, email, phone number and address.
+> - Cart: This page shows all the products which a user is pretending to buy.
+> - Checkout: This screen shows to the user the items being bought, delivery and payment information.
+> - Order History: Shows a history including all user's orders.
 
 Content
 -------------
