@@ -30,7 +30,7 @@ Team
 -------------
 - [Daniel Ziegler](https://github.com/movezig5)
 - [Erik Barns](https://github.com/ebarns)
-- [Jefferson Alves](https://www.linkedin.com/in/jeffersoanlvess)
+- [Jefferson Alves](https://www.linkedin.com/in/jeffersonalvess)
 
 
 License
